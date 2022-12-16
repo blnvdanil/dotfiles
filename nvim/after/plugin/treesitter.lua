@@ -9,18 +9,25 @@ treesitter.setup {
   -- A list of parser names, or "all"
   ensure_installed = {
     "lua",
+
+    "comment",
     "javascript",
     "typescript",
     "html",
     "tsx",
     "scss",
-    "fish",
-    "gitignore",
+    "css",
+
     "markdown",
     "markdown_inline",
-    "comment",
+
+    "gitignore",
     "git_rebase",
     "gitcommit",
+    "diff",
+
+    "fish",
+    "bash",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
