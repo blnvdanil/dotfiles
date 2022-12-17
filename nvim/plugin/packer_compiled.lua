@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/danil/.local/share/nvim/site/pack/packer/start/darcula",
     url = "https://github.com/doums/darcula"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/danil/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/home/danil/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
