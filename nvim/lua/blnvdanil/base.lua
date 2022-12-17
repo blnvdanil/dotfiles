@@ -28,6 +28,9 @@ vim.opt.laststatus = 2
 -- Backups
 vim.opt.backup = false
 vim.opt.backupskip = { "/tmp/*" }
+vim.opt.swapfile = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
 
 -- Block comments
 vim.opt.formatoptions:append { "r" }
@@ -40,6 +43,9 @@ vim.opt.wrap = true
 vim.opt.shell = "bash" -- turn it into fish later
 vim.opt.scrolloff = 5
 vim.opt.title = true
+vim.opt.colorcolumn = "80"
+vim.opt.updatetime = 50
+vim.opt.signcolumn = "yes"
 
 -- Pasting with "p" from clipboard
 vim.opt.clipboard:append { 'unnamedplus' }
