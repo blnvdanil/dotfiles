@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use "rebelot/kanagawa.nvim"
 
   use "ThePrimeagen/harpoon"
+  use "ThePrimeagen/vim-be-good"
 
   use "mbbill/undotree"
 

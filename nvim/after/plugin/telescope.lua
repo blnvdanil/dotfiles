@@ -12,9 +12,21 @@ function find_files()
   })
 end
 
+function git_files()
+  builtin.git_files({
+    layout_strategy='horizontal',
+    layout_config={
+      width=0.95,
+      prompt_position="top",
+      preview_width=0.6
+    },
+    sorting_strategy="ascending"
+  })
+end
+
 vim.keymap.set('n', '<leader>ff', find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<C-p>', git_files, {})
 
 
 local status, telescope = pcall(require, "telescope")
