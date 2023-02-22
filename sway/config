@@ -100,11 +100,11 @@ bindsym --to-code {
 # Workspaces #
 ##############
 set {
-  $terms "1: terms"
-  $web "2: web"
-  $code "3: code"
-  $files "4: files"
-  $tg "5: tg"
+  $terms "3: terms"
+  $web "1: web"
+  $code "2: code"
+  $files "5: files"
+  $tg "4: tg"
   $ws6 "6"
   $ws7 "7"
   $ws8 "8"
@@ -114,11 +114,11 @@ set {
 
 # switch to workspace
 bindsym {
-  $mod+1 workspace number $terms
-  $mod+2 workspace number $web
-  $mod+3 workspace number $code
-  $mod+4 workspace number $files
-  $mod+5 workspace number $tg
+  $mod+1 workspace number $web
+  $mod+2 workspace number $code
+  $mod+3 workspace number $terms
+  $mod+4 workspace number $tg
+  $mod+5 workspace number $files
   $mod+6 workspace number $ws6
   $mod+7 workspace number $ws7
   $mod+8 workspace number $ws8
@@ -128,11 +128,11 @@ bindsym {
 
 # move focused container to workspace
 bindsym {
-  $mod+Shift+1 move container to workspace number $terms
-  $mod+Shift+2 move container to workspace number $web
-  $mod+Shift+3 move container to workspace number $code
-  $mod+Shift+4 move container to workspace number $files
-  $mod+Shift+5 move container to workspace number $tg
+  $mod+Shift+1 move container to workspace number $web
+  $mod+Shift+2 move container to workspace number $code
+  $mod+Shift+3 move container to workspace number $terms
+  $mod+Shift+4 move container to workspace number $tg
+  $mod+Shift+5 move container to workspace number $files
   $mod+Shift+6 move container to workspace number $ws6
   $mod+Shift+7 move container to workspace number $ws7
   $mod+Shift+8 move container to workspace number $ws8
@@ -263,7 +263,7 @@ input type:touchpad {
 # Screenshots #
 ###############
 
-bindsym $mod+Shift+A exec grim -g "$(slurp)" - | wl-copy
+bindsym --to-code $mod+Shift+A exec grim -g "$(slurp)" - | wl-copy
 
 bindsym --locked {
   # Brightness control
