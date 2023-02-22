@@ -15,3 +15,10 @@ vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("n", "Q", "<nop>")
+
+vim.keymap.set({"n", "v"}, "h", ";")
+vim.keymap.set({"n", "v"}, "j", "h")
+vim.keymap.set({"n", "v"}, "k", "j")
+vim.keymap.set({"n", "v"}, "l", "k")
+vim.keymap.set({"n", "v"}, ";", "l")
+
