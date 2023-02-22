@@ -5,10 +5,10 @@
 set {
   $mod Mod4
   
-  $left h
-  $down j
-  $up k
-  $right l
+  $left j
+  $down k
+  $up l
+  $right semicolon
   
   $term alacritty
   
