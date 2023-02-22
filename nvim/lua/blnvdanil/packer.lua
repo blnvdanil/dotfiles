@@ -58,7 +58,11 @@ return require('packer').startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
   }
-
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end,
+    commit = "f00eb3b"
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
