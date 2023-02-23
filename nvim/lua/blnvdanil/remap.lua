@@ -1,4 +1,7 @@
 vim.g.mapleader = " "
+
+local map = vim.keymap.set
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -21,4 +24,9 @@ vim.keymap.set({"n", "v"}, "j", "h")
 vim.keymap.set({"n", "v"}, "k", "j")
 vim.keymap.set({"n", "v"}, "l", "k")
 vim.keymap.set({"n", "v"}, ";", "l")
+
+map({"n"}, "<A-j>", "<C-w>h")
+map({"n"}, "<A-k>", "<C-w>j")
+map({"n"}, "<A-l>", "<C-w>k")
+map({"n"}, "<A-;>", "<C-w>l")
 
