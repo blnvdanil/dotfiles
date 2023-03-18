@@ -237,7 +237,7 @@ bar {
 focus_follows_mouse no
 
 # go back when double click on workspace
-workspace_auto_back_and_forth yes
+#workspace_auto_back_and_forth yes
 
 ###########
 # Outputs #
@@ -258,6 +258,8 @@ input type:touchpad {
 	natural_scroll enabled
 	tap enabled
 }
+
+input 9580:109:HUION_Huion_Tablet_Pen map_to_output HDMI-A-1
 
 ###############
 # Screenshots #
