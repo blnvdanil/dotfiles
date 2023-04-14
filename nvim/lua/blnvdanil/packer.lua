@@ -63,6 +63,10 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end,
     commit = "f00eb3b"
   }
+
+  use {
+    'numToStr/Comment.nvim',
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

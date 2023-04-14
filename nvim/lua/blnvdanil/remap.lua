@@ -2,28 +2,28 @@ vim.g.mapleader = " "
 
 local map = vim.keymap.set
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+map("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "L", ":m '<-2<CR>gv=gv")
+map("v", "K", ":m '>+1<CR>gv=gv")
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
 
-vim.keymap.set("x", "<leader>p", "\"_dP")
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+map("x", "<leader>p", "\"_dP")
+map("n", "<leader>d", "\"_d")
+map("v", "<leader>d", "\"_d")
 
-vim.keymap.set("n", "Q", "<nop>")
+map("n", "Q", "<nop>")
 
-vim.keymap.set({"n", "v"}, "h", ";")
-vim.keymap.set({"n", "v"}, "j", "h")
-vim.keymap.set({"n", "v"}, "k", "j")
-vim.keymap.set({"n", "v"}, "l", "k")
-vim.keymap.set({"n", "v"}, ";", "l")
+map({"n", "v"}, "h", ";")
+map({"n", "v"}, "j", "h")
+map({"n", "v"}, "k", "j")
+map({"n", "v"}, "l", "k")
+map({"n", "v"}, ";", "l")
 
 map({"n"}, "<A-j>", "<C-w>h")
 map({"n"}, "<A-k>", "<C-w>j")

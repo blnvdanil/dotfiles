@@ -1,9 +1,13 @@
-vim.opt.cursorline = true
-vim.opt.termguicolors = true
-vim.opt.winblend = 0
+local opt = vim.opt
+
+opt.cursorline = true
+opt.termguicolors = true
+opt.winblend = 0
 
 -- Popup menu in cmd completion
-vim.opt.wildoptions = "pum"
-vim.opt.pumblend = 5
+opt.wildoptions = "pum"
+opt.pumblend = 5
 
-vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme kanagawa-wave")
+--vim.cmd("colorscheme kanagawa-lotus") -- light
+--vim.cmd("colorscheme kanagawa-dragon") -- dark
