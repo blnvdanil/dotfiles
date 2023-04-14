@@ -28,7 +28,7 @@
 #  --grace '3' \
 #  --show-failed-attempts
 swaylock \
-  --image ~/Pictures/wallpapers/skeleton.jpg \
+  --image ~/Pictures/wallpapers/violet1.jpg \
   --font 'JetBrainsMono' \
   --font-size 30 \
   --ring-color 282828 \
