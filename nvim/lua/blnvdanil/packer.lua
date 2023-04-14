@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
   use "mbbill/undotree"
 
   use "tpope/vim-fugitive"
+  use "shumphrey/fugitive-gitlab.vim"
 
   use {
     'VonHeikemen/lsp-zero.nvim',

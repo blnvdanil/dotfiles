@@ -1,6 +1,6 @@
 local builtin = require('telescope.builtin')
 
-function find_files()
+local find_files = function()
   builtin.find_files({
     layout_strategy='horizontal',
     layout_config={
@@ -12,7 +12,7 @@ function find_files()
   })
 end
 
-function git_files()
+local git_files = function()
   builtin.git_files({
     layout_strategy='horizontal',
     layout_config={
@@ -36,17 +36,25 @@ if (not status) then
   return
 end
 
-require('telescope').setup{
+telescope.setup{
   defaults = {
     layout_config = {
       vertical = { width = 0.5 }
       -- other layout configuration here
     },
+    mappings = {
+      n = {
+        ["j"] = false,
+        ["k"] = "move_selection_next",
+        ["l"] = "move_selection_previous",
+        [";"] = false,
+      }
+    }
     -- other defaults configuration here
   },
   pickers = {
     find_files = {
---      theme = "dropdown",
+     -- theme = "dropdown",
     }
   },
 }
