@@ -24,6 +24,8 @@ lsp.set_preferences({
 lsp.ensure_installed({
   "tsserver",
   "eslint",
-  "lua_ls"
+  "lua_ls",
+  "rust_analyzer"
 })
+
 lsp.setup()

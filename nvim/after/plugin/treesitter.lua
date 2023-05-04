@@ -28,6 +28,7 @@ treesitter.setup {
 
     "fish",
     "bash",
+    "rust",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)

@@ -1,5 +1,7 @@
 #!/usr/bin/fish
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Kanagawa Fish shell theme
 # A template was taken and modified from Tokyonight:
 # https://github.com/folke/tokyonight.nvim/blob/main/extras/fish_tokyonight_night.fish
