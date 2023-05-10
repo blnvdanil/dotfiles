@@ -21,6 +21,8 @@ lsp.set_preferences({
   }
 })
 
+-- vim.diagnostic.disable();
+
 lsp.ensure_installed({
   "tsserver",
   "eslint",
