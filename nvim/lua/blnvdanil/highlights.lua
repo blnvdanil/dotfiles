@@ -9,5 +9,5 @@ opt.wildoptions = "pum"
 opt.pumblend = 5
 
 vim.cmd("colorscheme kanagawa-wave")
---vim.cmd("colorscheme kanagawa-lotus") -- light
---vim.cmd("colorscheme kanagawa-dragon") -- dark
+-- vim.cmd("colorscheme kanagawa-lotus") -- light
+-- vim.cmd("colorscheme kanagawa-dragon") -- dark

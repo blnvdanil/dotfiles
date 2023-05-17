@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.elan/bin:$PATH"
 
 # Kanagawa Fish shell theme
 # A template was taken and modified from Tokyonight:

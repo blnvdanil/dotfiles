@@ -33,7 +33,6 @@ return require('packer').startup(function(use)
   use "mbbill/undotree"
 
   use "tpope/vim-fugitive"
-  use "shumphrey/fugitive-gitlab.vim"
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -72,6 +71,7 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
 
+  use "Julian/lean.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
