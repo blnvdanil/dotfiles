@@ -79,8 +79,18 @@ telescope.setup{
         ["l"] = "move_selection_previous",
         [";"] = false,
       }
-    }
+    },
     -- other defaults configuration here
+    vimgrep_arguments = {
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+      "--trim" -- add this value
+    }
   },
   pickers = {
     find_files = {
