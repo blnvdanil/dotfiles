@@ -50,3 +50,5 @@ vim.opt.signcolumn = "yes"
 -- Pasting with "p" from clipboard
 vim.opt.clipboard:append { 'unnamedplus' }
 
+-- Netrw
+vim.g.netrw_liststyle = 3

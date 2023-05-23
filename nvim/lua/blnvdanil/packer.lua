@@ -72,6 +72,7 @@ return require('packer').startup(function(use)
   use('MunifTanjim/prettier.nvim')
 
   use "Julian/lean.nvim"
+  use 'nvim-tree/nvim-web-devicons'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
