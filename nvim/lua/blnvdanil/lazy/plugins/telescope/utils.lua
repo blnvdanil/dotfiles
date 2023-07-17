@@ -101,58 +101,11 @@ local function live_grep()
   builtin.live_grep(opts);
 end
 
-local set_kymap = vim.keymap.set;
-
-set_kymap('n', '<leader>ff', find_files, {})
-set_kymap('n', '<leader>fg', live_grep, {})
-set_kymap('n', '<leader>fb', builtin.buffers, {})
-set_kymap('n', '<C-p>', git_files, {})
-
-
-local status, telescope = pcall(require, "telescope")
-
-if (not status) then
-  print("Telescope is not installed")
-  return
-end
-
-telescope.setup{
-  defaults = {
-    layout_config = {
-      vertical = { width = 0.5 }
-      -- other layout configuration here
-    },
-    wrap_results = true,
-    path_display = {truncate = 3},
-    dynamic_preview_title = true,
-
-    color_devicons = true,
-    mappings = {
-      n = {
-        ["j"] = false,
-        ["k"] = "move_selection_next",
-        ["l"] = "move_selection_previous",
-        [";"] = false,
-      }
-    },
-    -- other defaults configuration here
-    vimgrep_arguments = {
-      "rg",
-      "--color=never",
-      "--no-heading",
-      "--with-filename",
-      "--line-number",
-      "--column",
-      "--smart-case",
-      "--trim" -- add this value
-    }
-  },
-  pickers = {
-    find_files = {
-     -- theme = "dropdown",
-    }
-  },
+return {
+  find_files = find_files,
+  live_grep = live_grep,
+  git_files = git_files,
+  buffers = function (opts)
+    builtin.buffers(opts);
+  end
 }
-
-require("telescope").load_extension('harpoon')
-
