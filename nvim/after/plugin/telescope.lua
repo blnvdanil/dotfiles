@@ -101,10 +101,12 @@ local function live_grep()
   builtin.live_grep(opts);
 end
 
-vim.keymap.set('n', '<leader>ff', find_files, {})
-vim.keymap.set('n', '<leader>fg', live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<C-p>', git_files, {})
+local set_kymap = vim.keymap.set;
+
+set_kymap('n', '<leader>ff', find_files, {})
+set_kymap('n', '<leader>fg', live_grep, {})
+set_kymap('n', '<leader>fb', builtin.buffers, {})
+set_kymap('n', '<C-p>', git_files, {})
 
 
 local status, telescope = pcall(require, "telescope")
