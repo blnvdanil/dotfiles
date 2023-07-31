@@ -26,7 +26,9 @@ local lsp_zero_config = function ()
     "rust_analyzer"
   })
 
-  lsp_zero.setup()
+  lsp_zero.skip_server_setup({"tsserver", "eslint"})
+
+  -- lsp_zero.setup()
 end
 
 return {

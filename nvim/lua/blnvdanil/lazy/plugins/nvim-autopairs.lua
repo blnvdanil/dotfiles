@@ -1,4 +1,5 @@
 return {
-  "windwp/nvim-autopairs",
-  commit = "f00eb3b"
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {},
 }
