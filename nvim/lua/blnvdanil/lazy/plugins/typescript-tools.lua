@@ -1,3 +1,4 @@
+print "here"
 return {
   "pmizio/typescript-tools.nvim",
   dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
@@ -5,7 +6,7 @@ return {
   config = function ()
     require("typescript-tools").setup {
       on_attach = function (client, bufnr)
-        vim.keymap.set("n", "<leader>gd", "<cmd>TSToolsGoToSourceDefinition<cr>", {buffer = bufnr})
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition,  {buffer = bufnr})
       end,
       settings = {
         -- spawn additional tsserver instance to calculate diagnostics on it

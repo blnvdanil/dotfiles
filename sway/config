@@ -221,11 +221,11 @@ bindsym --to-code $mod+r mode "resize"
 # Border #
 ##########
 
-default_border none
+default_border normal 1
 default_floating_border none
-font pango:monospace 0
+font JetBrainsMono 10
 titlebar_padding 1
-titlebar_border_thickness 0
+#titlebar_border_thickness 0
 
 
 #
@@ -233,8 +233,6 @@ titlebar_border_thickness 0
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
     swaybar_command waybar
 }
 
@@ -262,7 +260,7 @@ input type:touchpad {
 	natural_scroll enabled
 	tap enabled
 }
-output HDMI-A-1 pos 0,0
+output HDMI-A-1 pos 0,0 mode 2560x1440@74.780Hz
 
 #input 9580:109:HUION_Huion_Tablet_Pen map_to_output HDMI-A-1
 

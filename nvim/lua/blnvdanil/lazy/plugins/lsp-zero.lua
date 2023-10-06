@@ -20,7 +20,7 @@ local lsp_zero_config = function ()
   -- vim.diagnostic.disable();
 
   lsp_zero.ensure_installed({
-    "tsserver",
+    -- "tsserver",
     "eslint",
     "lua_ls",
     "rust_analyzer"
@@ -28,7 +28,7 @@ local lsp_zero_config = function ()
 
   lsp_zero.skip_server_setup({"tsserver", "eslint"})
 
-  -- lsp_zero.setup()
+  lsp_zero.setup()
 end
 
 return {

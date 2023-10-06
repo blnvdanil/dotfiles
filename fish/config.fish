@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-export PATH="$HOME/.cargo/bin:$HOME/.elan/bin:$PATH"
+export PATH="$HOVE/skia-stuff/depot_tools:$HOME/.cargo/bin:$HOME/.elan/bin:$PATH"
 
 # Kanagawa Fish shell theme
 # A template was taken and modified from Tokyonight:
@@ -50,3 +50,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
