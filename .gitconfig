@@ -1,0 +1,7 @@
+[user]
+	email = blnvdanil@gmail.com
+	name = Danil B
+[core]
+	pager = less --mouse
+[push]
+	autoSetupRemote = true
