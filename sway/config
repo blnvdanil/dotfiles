@@ -245,7 +245,7 @@ focus_follows_mouse no
 # Outputs #
 ###########
 
-output * bg ~/Pictures/wallpapers/wp.jpg fill
+output * bg ~/Pictures/wallpapers/paintingships.jpg fill
 
 ##########
 # Inputs #

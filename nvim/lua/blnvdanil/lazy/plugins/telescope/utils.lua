@@ -1,4 +1,6 @@
 local builtin = require('telescope.builtin')
+local themes = require("telescope.themes")
+local previewers = require("telescope.previewers")
 
 local function is_git_repo()
   vim.fn.system("git rev-parse --is-inside-work-tree");
@@ -31,54 +33,55 @@ local get_path_and_tail = function(filename)
   return bufname_tail, path_to_display
 end
 
-local find_files = function(opts)
-  local make_entry = require('telescope.make_entry')
-  local strings = require('plenary.strings')
-  local utils = require('telescope.utils')
-  local entry_display = require('telescope.pickers.entry_display')
-  local devicons = require('nvim-web-devicons')
-  local def_icon = devicons.get_icon('fname', { default = true })
-  local iconwidth = strings.strdisplaywidth(def_icon)
+local find_files = function()
+  -- local make_entry = require('telescope.make_entry')
+  -- local strings = require('plenary.strings')
+  -- local utils = require('telescope.utils')
+  -- local entry_display = require('telescope.pickers.entry_display')
+  -- local devicons = require('nvim-web-devicons')
+  -- local def_icon = devicons.get_icon('fname', { default = true })
+  -- local iconwidth = strings.strdisplaywidth(def_icon)
 
-  opts = opts or {
-    layout_strategy='horizontal',
+  local opts = {
+    layout_strategy='vertical',
     layout_config={
-      width=0.95,
+      height = 0.95,
+      width = 0.95,
       prompt_position="top",
-      preview_width=0.6
     },
-    sorting_strategy="ascending"
+    find_command = { "fd", "--type", "f", "--color", "never" },
+    sorting_strategy="ascending",
   }
 
   with_git_root_cwd(opts)
 
-  local entry_make = make_entry.gen_from_file(opts)
-  opts.entry_maker = function(line)
-    local entry = entry_make(line)
-    local displayer = entry_display.create({
-      separator = ' ',
-      items = {
-        { width = iconwidth },
-        { width = nil },
-        { remaining = true },
-      },
-    })
-    entry.display = function(et)
-      -- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/make_entry.lua
-      local tail_raw, path_to_display = get_path_and_tail(et.value)
-      local tail = tail_raw .. ' '
-      local icon, iconhl = utils.get_devicons(tail_raw)
+  -- local entry_make = make_entry.gen_from_file(opts)
+  -- opts.entry_maker = function(line)
+  --   local entry = entry_make(line)
+  --   local displayer = entry_display.create({
+  --     separator = ' ',
+  --     items = {
+  --       { width = iconwidth },
+  --       { width = nil },
+  --       { remaining = true },
+  --     },
+  --   })
+  --   entry.display = function(et)
+  --     -- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/make_entry.lua
+  --     local tail_raw, path_to_display = get_path_and_tail(et.value)
+  --     local tail = tail_raw .. ' '
+  --     local icon, iconhl = utils.get_devicons(tail_raw)
+  --
+  --     return displayer({
+  --       { icon,            iconhl },
+  --       tail,
+  --       { path_to_display, 'TelescopeResultsComment' },
+  --     })
+  --   end
+  --   return entry
+  -- end
 
-      return displayer({
-        { icon,            iconhl },
-        tail,
-        { path_to_display, 'TelescopeResultsComment' },
-      })
-    end
-    return entry
-  end
-
-  return require('telescope.builtin').find_files(opts)
+  builtin.find_files(themes.get_dropdown(opts))
 end
 
 local git_files = function()
@@ -96,9 +99,19 @@ local git_files = function()
 end
 
 local function live_grep()
-  local opts = with_git_root_cwd({});
+  local opts = {
+    layout_strategy='vertical',
+    layout_config={
+      height = 0.95,
+      width = 0.95,
+      prompt_position="top",
+    },
+    sorting_strategy="ascending",
+  };
 
-  builtin.live_grep(opts);
+  with_git_root_cwd(opts);
+
+  builtin.live_grep(themes.get_dropdown(opts));
 end
 
 return {
