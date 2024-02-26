@@ -40,7 +40,5 @@ return {
     end
 
     require("kanagawa").setup(config)
-
-    vim.cmd("colorscheme kanagawa");
   end
 }

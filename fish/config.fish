@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-export PATH="$HOVE/skia-stuff/depot_tools:$HOME/.cargo/bin:$HOME/.elan/bin:$PATH"
+export PATH="$HOME/external/emsdk:$HOME/.cargo/bin:$PATH"
 
 # Kanagawa Fish shell theme
 # A template was taken and modified from Tokyonight:
