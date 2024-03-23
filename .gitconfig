@@ -5,3 +5,7 @@
 	pager = less --mouse
 [push]
 	autoSetupRemote = true
+[http]
+	cookiefile = /home/danil/.gitcookies
+[init]
+	defaultBranch = main

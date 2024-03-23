@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-export PATH="$HOME/external/emsdk:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/external/depot_tools:$HOME/external/emsdk:$HOME/external/emsdk/upstream/emscripten:$HOME/.cargo/bin:$PATH"
 
 # Kanagawa Fish shell theme
 # A template was taken and modified from Tokyonight:

@@ -19,6 +19,7 @@ vim.opt.expandtab = true
 -- Search
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- CMD and status line
 vim.opt.showcmd = true
